@@ -13,6 +13,10 @@ module.exports = {
                     presets: ["@babel/preset-react"],
                 },
             },
+            {
+                test: /\.md$/i,
+                use: "raw-loader",
+            },
         ],
     },
 };
