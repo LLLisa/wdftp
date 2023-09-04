@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import Markdown from "markdown-to-jsx";
+import React from "react";
+import { ReactMarkdown as Markdown } from "react-markdown/lib/react-markdown";
 
-import test from "../lessons/testlesson/test.md";
-console.log(test);
+import test from "./lessons/testlesson/test.md";
 
 export default () => {
     return (
@@ -10,7 +9,7 @@ export default () => {
             <h1>please work</h1>
             <ul>
                 <li>
-                    <Markdown>{test}</Markdown>;
+                    <Markdown>{test}</Markdown>
                 </li>
             </ul>
         </>
