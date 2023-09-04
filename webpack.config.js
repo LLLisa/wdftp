@@ -1,16 +1,16 @@
 module.exports = {
-    entry: 'index.js',
+    entry: "index.js",
 
-    devtool: 'source-map',
+    devtool: "source-map",
 
     module: {
         rules: [
             {
                 test: /jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: "babel-loader",
                 options: {
-                    presets: ['@babel/preset-react'],
+                    presets: ["@babel/preset-react"],
                 },
             },
         ],
