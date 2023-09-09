@@ -1,9 +1,12 @@
 const { Client } = require("pg");
+const { DATABASE_URL } = require("../config");
 
-const databaseUrl = process.env.DATABASE_URL || "postgres://localhost/wdftp";
-
-const conn = new Client({
-    connectionString: databaseUrl,
+const client = new Client({
+    connectionString: DATABASE_URL,
 });
 
-module.exports = conn;
+(async () => {
+    await client.connect();
+})();
+
+module.exports = client;
