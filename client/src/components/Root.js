@@ -1,10 +1,10 @@
 import React from "react";
-import Test from "../views/SinglePost";
+import { SinglePost, PostList, AuthorList } from "../views";
 
 export default () => {
     return (
         <>
-            <Test />
+            <SinglePost />
         </>
     );
 };
