@@ -8,7 +8,7 @@
         "build:dev": "npm run build -- --watch --mode=development",
         "start": "node server",
         "start:dev": "npm run build:dev & nodemon server",
-        "seed": "node db/rebuildTables.js"
+        "seed": "node server/db/rebuildTables.js"
     },
     "keywords": [],
     "author": "",

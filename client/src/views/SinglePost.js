@@ -4,6 +4,7 @@ import { ReactMarkdown as Markdown } from "react-markdown/lib/react-markdown";
 
 export default () => {
     const [post, setPost] = useState("");
+
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch("/posts/1");
@@ -13,6 +14,7 @@ export default () => {
 
         fetchData().catch(console.error);
     }, []);
+
     return (
         post.id && (
             <article>

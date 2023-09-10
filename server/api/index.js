@@ -13,10 +13,28 @@ app.get("/", (req, res, next) => {
     }
 });
 
+app.get("/posts", async (req, res, next) => {
+    try {
+        const response = await client.query(`SELECT * FROM posts;`);
+        res.send(response.rows);
+    } catch (error) {
+        next(error);
+    }
+});
+
 app.get("/posts/:id", async (req, res, next) => {
     try {
         const response = await client.query(`SELECT * FROM posts WHERE id = ${req.params.id};`);
         res.send(response.rows[0]);
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.get("/authors", async (req, res, next) => {
+    try {
+        const response = await client.query(`SELECT * FROM authors;`);
+        res.send(response.rows);
     } catch (error) {
         next(error);
     }
