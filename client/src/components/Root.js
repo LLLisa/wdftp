@@ -1,5 +1,5 @@
 import React from "react";
-import Test from "./views/test";
+import Test from "../views/SinglePost";
 
 export default () => {
     return (
