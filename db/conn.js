@@ -1,5 +1,5 @@
 const { Client } = require("pg");
-const { DATABASE_URL } = require("../config");
+const DATABASE_URL = process.env.DATABASE_URL || "postgres://localhost/wdftp";
 
 const client = new Client({
     connectionString: DATABASE_URL,

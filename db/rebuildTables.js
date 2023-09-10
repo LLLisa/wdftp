@@ -1,5 +1,4 @@
 const client = require("./conn");
-// const testPost = require("../posts/test.md");
 const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 const path = require("path");

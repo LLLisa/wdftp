@@ -1,6 +1,6 @@
 const app = require("../api");
 
-const { PORT } = require("../config");
+const PORT = process.env.PORT || 1312;
 
 const init = () => {
     try {
