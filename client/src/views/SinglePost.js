@@ -2,18 +2,19 @@ import React, { useEffect, useState } from "react";
 
 import { ReactMarkdown as Markdown } from "react-markdown/lib/react-markdown";
 
+const API_URL = "http://localhost:1312";
+
 export default () => {
     const [post, setPost] = useState("");
 
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("/posts/1");
-            const json = await response.json();
-            setPost(json);
-        };
-
-        fetchData().catch(console.error);
+        fetchData();
     }, []);
+
+    const fetchData = async () => {
+        const response = await fetch(`${API_URL}/posts/1`);
+        setPost(await response.json());
+    };
 
     return (
         post.id && (
